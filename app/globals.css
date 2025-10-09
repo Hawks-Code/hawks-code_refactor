@@ -19,8 +19,117 @@
   }
 }
 
+@layer components {
+  .aero-bg {
+    background: linear-gradient(to bottom,
+        oklch(0.50 0.10 250),
+        /* Lighter top (shine) */
+        oklch(0.35 0.09 250),
+        /* Original color (#036) */
+        oklch(0.28 0.09 250),
+        /* Slightly darker */
+        oklch(0.22 0.08 250)
+        /* Darkest bottom */
+      );
+  }
+
+  .hover\:aero-bg-hover:hover {
+    background: linear-gradient(to bottom,
+        oklch(0.58 0.11 250),
+        /* Brighter top (enhanced shine) */
+        oklch(0.45 0.10 250),
+        /* Lighter than original */
+        oklch(0.38 0.09 250),
+        /* Mid-tone */
+        oklch(0.32 0.09 250)
+        /* Lighter bottom */
+      );
+  }
+
+  .aero-bg-gray {
+    background: linear-gradient(to bottom,
+        oklch(0.92 0.01 250),
+        /* Lighter top (shine) */
+        oklch(0.85 0.01 250),
+        /* Light gray */
+        oklch(0.78 0.01 250),
+        /* Slightly darker */
+        oklch(0.72 0.01 250)
+        /* Darkest bottom */
+      );
+  }
+
+  .hover\:aero-bg-gray-hover:hover {
+    background: linear-gradient(to bottom,
+        oklch(0.96 0.005 250),
+        /* Brighter top */
+        oklch(0.90 0.005 250),
+        /* Lighter gray */
+        oklch(0.84 0.005 250),
+        /* Mid-tone */
+        oklch(0.78 0.005 250)
+        /* Lighter bottom */
+      );
+  }
+
+  .aero-bg-white {
+    background: linear-gradient(to bottom,
+        oklch(1.0 0 0),
+        /* Pure white top (shine) */
+        oklch(0.98 0.005 250),
+        /* Near white */
+        oklch(0.94 0.01 250),
+        /* Slightly off-white */
+        oklch(0.90 0.01 250)
+        /* Subtle shadow */
+      );
+  }
+
+  .hover\:aero-bg-white-hover:hover {
+    background: linear-gradient(to bottom,
+        oklch(1.0 0 0),
+        /* Pure white top */
+        oklch(0.99 0.002 250),
+        /* Almost white */
+        oklch(0.96 0.005 250),
+        /* Very light */
+        oklch(0.93 0.005 250)
+        /* Subtle variation */
+      );
+  }
+
+
+}
+
+@layer utilities {
+  .aero-bg-translucent {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: multiply;
+  }
+}
+
+.main-page-grid {
+  grid-template-areas:
+    "welcome welcome welcome"
+    "info img img"
+    "ing img img"
+  ;
+}
+
+@media only screen and (max-width: 800px) {
+  .main-page-grid {
+    grid-template-areas:
+      "welcome welcome welcome"
+      "info info info"
+      "img img img"
+    ;
+  }
+
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: 'Times New Roman', Times, serif;
 }
