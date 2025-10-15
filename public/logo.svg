@@ -9,9 +9,9 @@
    id="svg1"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="logo.webp"
-   inkscape:export-xdpi="1600"
-   inkscape:export-ydpi="1600"
+   inkscape:export-filename="../app/favicon.png"
+   inkscape:export-xdpi="32"
+   inkscape:export-ydpi="32"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -28,8 +28,8 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      inkscape:zoom="12.638879"
-     inkscape:cx="20.729687"
-     inkscape:cy="26.03079"
+     inkscape:cx="20.769247"
+     inkscape:cy="26.109911"
      inkscape:window-width="2560"
      inkscape:window-height="1516"
      inkscape:window-x="0"
@@ -239,7 +239,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:C059;-inkscape-font-specification:C059;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect30-9);display:inline;fill:url(#linearGradient41);fill-opacity:1"><tspan
          x="20.017578"
          y="28.973993"
-         id="tspan2">H</tspan></text>
+         id="tspan1">H</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.90184px;font-family:C059;-inkscape-font-specification:C059;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:url(#linearGradient42);fill-opacity:1;stroke-width:0.365796"
@@ -275,7 +275,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:C059;-inkscape-font-specification:C059;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect30);display:inline;fill:url(#linearGradient33);fill-opacity:1"><tspan
          x="20.017578"
          y="28.973993"
-         id="tspan3">H</tspan></text>
+         id="tspan2">H</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.90184px;font-family:C059;-inkscape-font-specification:C059;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:url(#linearGradient35);stroke-width:0.365796"

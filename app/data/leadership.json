@@ -1,0 +1,18 @@
+{
+  "president": {
+    "name": "Joshua",
+    "picture": ""
+  },
+  "vicePresident": {
+    "name": "Troy",
+    "picture": ""
+  },
+  "treasurer": {
+    "name": "Oleh",
+    "picture": ""
+  },
+  "minutes": {
+    "name": "Ryan",
+    "picture": ""
+  }
+}

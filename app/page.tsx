@@ -1,30 +1,49 @@
 import Image from "next/image";
 import InstagramLogo from "@/public/instagram.png"
 import DiscordLogo from "@/public/discord.png"
+import { ElementType } from "react";
+import ContentCard from "./ui/ContentCard";
+import ContentTitle from "./ui/ContentTitle";
+import ContentTile from "./ui/ContentTile";
+import Grids from "./style/grid.module.css";
+
+
+
 
 export default function Home() {
-  return (
-    <main className="aero-bg-gray  h-full! w-full!  justify-center items-center " >
-      <div className="mx-[5px] sm:mx-[25vw] my-[50px] grid main-page-grid gap-6">
-        <div className="[grid-area:welcome] aero-bg-white border-1 rounded-t-3xl shadow">
-          <h1 className="text-center text-5xl aero-bg-white border-b-1 rounded-t-3xl">Welcome!</h1>
-          <div className="aero-bg-white p-3">
-          <p >
-            Welcome to the Computer Science Club @ Harper College! Here you can view all materials, resources, information, and projects in relation to the Computer Science Club
-          </p>
-            <strong>Our Socials:</strong>
-          <div className="flex flex-row justify-around text-center">
-            <a href="https://discord.gg/MXRDZyhgaS" className="hover:aero-bg-white-hover p-3"><img src={DiscordLogo.src} className="w-[64px] h-[64px]"></img>Discord</a>
-            <a href="https://discord.gg/MXRDZyhgaS" className="hover:aero-bg-white-hover p-3"><img src={InstagramLogo.src} className="w-[64px] h-[64px]"></img>Instagram</a>
-          </div>
-        </div>
-        </div>
-        <div className="[grid-area:info]  border-1 rounded-tl-xl shadow">
-          <h2 className="text-center text-3xl aero-bg-white aero-bg-translucent! rounded-tl-xl border-b-1 flex flex-row gap-3 justify-center items-center"><img src={InstagramLogo.src} className="max-w-[32px] max-h-[32px]" />Instagram</h2>
-          <p className="aero-bg-white p-3">lolkfpwwopewoprp</p>
-        </div>
-        <div className="[grid-area:img] aero-bg-white border-1 rounded-t-3xl shadow"><h1 className="text-center text-5xl">Welcome!</h1></div>
-      </div>
-    </main>
-  )
+  return <section className={`grid ${Grids['main-page-grid']} gap-6`}>
+    <ContentCard gridArea="welcome">
+      <ContentTitle as="h1">Welcome!</ContentTitle>
+      <ContentTile>
+        <p>
+          Welcome to the Computer Science Club at Harper College! Here you can view all materials, resources, information, and projects in relation to the Computer Science Club.
+          We are the club for those who want to explore game development, software engineering, web development, and artifical intelligence.
+          We welcome everyone, regardless of the experience, major, or skill. We only require interest!
+        </p>
+      </ContentTile>
+    </ContentCard>
+    <ContentCard gridArea="meeting-time">
+      <ContentTitle as="h2">Meeting times</ContentTitle>
+      <ContentTile>
+        <p>
+          We meet every Wednesday at 4:30PM CST in room D156.
+        </p>
+      </ContentTile>
+    </ContentCard>
+    <ContentCard gridArea="socials">
+      <ContentTitle as="h2">Our Socials</ContentTitle>
+      <ContentTile className="flex flex-row justify-around text-center">
+        <a href="https://discord.gg/MXRDZyhgaS" className="hover:aero-bg-white-hover p-3"><img src={DiscordLogo.src} className="w-[64px] h-[64px]"></img>Discord</a>
+        <a href="https://discord.gg/MXRDZyhgaS" className="hover:aero-bg-white-hover p-3"><img src={InstagramLogo.src} className="w-[64px] h-[64px]"></img>Instagram</a>
+      </ContentTile>
+    </ContentCard>
+    <ContentCard gridArea="info">
+      <ContentTitle as="h2" className="flex flex-row gap-3 justify-center items-center">
+        <img src={InstagramLogo.src} className="max-w-[32px] max-h-[32px]" />
+        Feed
+      </ContentTitle>
+    </ContentCard>
+    <ContentCard gridArea="img" className="rounded-3xl!">
+    </ContentCard>
+  </section>
 }

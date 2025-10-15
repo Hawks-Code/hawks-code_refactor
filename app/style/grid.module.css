@@ -1,0 +1,20 @@
+.main-page-grid {
+  grid-template-areas:
+    "welcome welcome welcome"
+    "meeting-time socials socials"
+    "info img img"
+  ;
+}
+
+@media only screen and (max-width: 800px) {
+  .main-page-grid {
+    grid-template-areas:
+      "welcome welcome welcome"
+      "meeting-time meeting-time meeting-time"
+      "socials socials socials"
+      "info info info"
+      "img img img"
+    ;
+  }
+
+}

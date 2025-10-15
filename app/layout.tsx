@@ -28,14 +28,18 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased
-        m-0! h-screen! flex flex-col             `}
+        m-0! min-h-screen! flex flex-col             `}
       >
-      <header>
-        <Banner />
-        <HeaderBar />
-      </header>
-        {children}
+        <header>
+          <Banner />
+          <HeaderBar />
+        </header>
+        <main className="aero-bg-gray min-h-full!  min-w-full  justify-center items-center  ">
+          <div className="mx-[5px] sm:mx-[25vw] my-[50px]">
+            {children}
+          </div>
+        </main>
       </body>
-    </html>
+    </html >
   );
 }

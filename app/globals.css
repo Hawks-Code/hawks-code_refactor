@@ -108,28 +108,10 @@
   }
 }
 
-.main-page-grid {
-  grid-template-areas:
-    "welcome welcome welcome"
-    "info img img"
-    "ing img img"
-  ;
-}
-
-@media only screen and (max-width: 800px) {
-  .main-page-grid {
-    grid-template-areas:
-      "welcome welcome welcome"
-      "info info info"
-      "img img img"
-    ;
-  }
-
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: 'Times New Roman', Times, serif; */
 }
