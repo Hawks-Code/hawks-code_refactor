@@ -2,8 +2,8 @@ import ContentCard from "../ui/ContentCard";
 import ContentTile from "../ui/ContentTile";
 import ContentTitle from "../ui/ContentTitle";
 import Leadership from "../data/leadership.json"
-import DefaultProfile from "@/public/frutiger_aero_avatar.webp"
-
+import DefaultProfile from "@/public/icons/frutiger_aero_avatar.webp"
+import Image from "next/image"
 
 /* Here we can put sections as separate components */
 
@@ -37,10 +37,10 @@ export default function AboutMe(): React.ReactNode {
       </ContentTitle>
       <ContentTile className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-8 ">
         {
-         // TODO: This is temporary
+          // TODO: This is temporary
           Object.entries(Leadership).map(([role, person]) => <div key={role} className="flex flex-col items-center gap-3">
-            <img src={(person.picture != null && person.picture.length > 0) ? person.picture : DefaultProfile.src} className="max-w-[128px] max-h-[128px] object-cover"></img>
-            <p className="text-center">{person.name}</p>
+            <Image alt={`Avatar of ${role}`} src={(person.picture != null && person.picture.length > 0) ? person.picture : DefaultProfile.src} width={128} height={128} className="max-w-[128px] max-h-[128px] object-cover"></Image>
+            <p className="text-center">{`${person.name}, ${role.replace(/([A-Z])/g, " $1").replace(/^./, (char) => char.toUpperCase()).trim()}`}</p>
           </div>)
         }
       </ContentTile>

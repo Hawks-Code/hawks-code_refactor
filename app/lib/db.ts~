@@ -1,0 +1,15 @@
+import Database from "better-sqlite3"
+
+let db: Database.Database | undefined = undefined
+
+export async function openDB(): Promise<Database.Database> {
+  if (db) {
+  return db
+  }
+  db = new Database("./md_resources.db")
+  // Initialize database
+  db.exec(`
+      CREATE TABLE IF NOT EXISTS md_resources()
+    `)
+  return db
+}

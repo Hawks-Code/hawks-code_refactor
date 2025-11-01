@@ -18,6 +18,6 @@ export default function ContentTitle<T extends ElementType = 'h1'>({ as, childre
     default: break
   }
   return <Component
-    {...props} className={`text-center ${textSize} aero-bg-white border-b-1 rounded-t-3xl py-3 ${props.className ?? ""}`}
+    {...props} className={`text-center ${textSize} aero-bg-white dark:border-black border-b-1 rounded-t-3xl py-3 ${props.className ?? ""}`}
   >{children}</Component>
 }

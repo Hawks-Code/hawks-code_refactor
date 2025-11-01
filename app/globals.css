@@ -1,23 +1,12 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@theme {
+  --color-foreground: #FFFFFF;
+  --color-alt-foreground: #000000;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 @layer components {
   .aero-bg {
@@ -98,7 +87,31 @@
       );
   }
 
+  .aero-bg-red {
+    background: linear-gradient(to bottom,
+        oklch(0.75 0.25 25),
+        /* Bright red top (shine) */
+        oklch(0.65 0.23 25),
+        /* Vibrant red */
+        oklch(0.55 0.21 25),
+        /* Medium red */
+        oklch(0.45 0.19 25)
+        /* Deep red shadow */
+      );
+  }
 
+  .hover\:aero-bg-red-hover:hover {
+    background: linear-gradient(to bottom,
+        oklch(0.78 0.26 25),
+        /* Brighter red top */
+        oklch(0.68 0.24 25),
+        /* Slightly lighter */
+        oklch(0.58 0.22 25),
+        /* Light medium red */
+        oklch(0.48 0.20 25)
+        /* Subtle variation */
+      );
+  }
 }
 
 @layer utilities {
@@ -108,10 +121,122 @@
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-alt-foreground: #FFFFFF;
+    --color-foreground: #FFFFFF;
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  /* font-family: 'Times New Roman', Times, serif; */
+  @layer components {
+    .aero-bg {
+      background: linear-gradient(to bottom,
+          oklch(0.35 0.09 250),
+          /* Lighter top (shine) */
+          oklch(0.25 0.08 250),
+          /* Dark blue */
+          oklch(0.20 0.07 250),
+          /* Slightly darker */
+          oklch(0.15 0.06 250)
+          /* Darkest bottom */
+        );
+    }
+
+    .hover\:aero-bg-hover:hover {
+      background: linear-gradient(to bottom,
+          oklch(0.40 0.10 250),
+          /* Brighter top (enhanced shine) */
+          oklch(0.30 0.09 250),
+          /* Lighter than original */
+          oklch(0.25 0.08 250),
+          /* Mid-tone */
+          oklch(0.20 0.07 250)
+          /* Lighter bottom */
+        );
+    }
+
+    .aero-bg-gray {
+      background: linear-gradient(to bottom,
+          oklch(0.35 0.01 250),
+          /* Lighter top (shine) */
+          oklch(0.28 0.01 250),
+          /* Dark gray */
+          oklch(0.23 0.01 250),
+          /* Slightly darker */
+          oklch(0.18 0.01 250)
+          /* Darkest bottom */
+        );
+    }
+
+    .hover\:aero-bg-gray-hover:hover {
+      background: linear-gradient(to bottom,
+          oklch(0.40 0.005 250),
+          /* Brighter top */
+          oklch(0.33 0.005 250),
+          /* Lighter gray */
+          oklch(0.28 0.005 250),
+          /* Mid-tone */
+          oklch(0.23 0.005 250)
+          /* Lighter bottom */
+        );
+    }
+
+    .aero-bg-white {
+      background: linear-gradient(to bottom,
+          oklch(0.30 0.01 250),
+          /* Light gray top (shine) */
+          oklch(0.25 0.01 250),
+          /* Medium dark gray */
+          oklch(0.20 0.01 250),
+          /* Darker gray */
+          oklch(0.16 0.01 250)
+          /* Subtle shadow */
+        );
+    }
+
+    .hover\:aero-bg-white-hover:hover {
+      background: linear-gradient(to bottom,
+          oklch(0.35 0.01 250),
+          /* Lighter top */
+          oklch(0.30 0.01 250),
+          /* Light gray */
+          oklch(0.25 0.01 250),
+          /* Medium gray */
+          oklch(0.21 0.01 250)
+          /* Subtle variation */
+        );
+    }
+
+    .aero-bg-red {
+      background: linear-gradient(to bottom,
+          oklch(0.55 0.22 25),
+          /* Muted red top (shine) */
+          oklch(0.45 0.20 25),
+          /* Deep red */
+          oklch(0.38 0.18 25),
+          /* Darker red */
+          oklch(0.30 0.16 25)
+          /* Very dark red shadow */
+        );
+    }
+
+    .hover\:aero-bg-red-hover:hover {
+      background: linear-gradient(to bottom,
+          oklch(0.58 0.23 25),
+          /* Brighter red top */
+          oklch(0.48 0.21 25),
+          /* Slightly lighter */
+          oklch(0.41 0.19 25),
+          /* Medium red */
+          oklch(0.33 0.17 25)
+          /* Subtle variation */
+        );
+    }
+  }
+
+  @layer utilities {
+    .aero-bg-translucent {
+      background-color: rgba(0, 0, 0, 0.5);
+      background-blend-mode: multiply;
+    }
+  }
 }
