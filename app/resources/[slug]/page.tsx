@@ -4,10 +4,10 @@ import ContentCard from "@/app/ui/ContentCard"
 import ContentTile from "@/app/ui/ContentTile"
 import ContentTitle from "@/app/ui/ContentTitle"
 import { MDXRemote } from "next-mdx-remote-client/rsc"
-import { DotGothic16 } from "next/font/google"
+import { Nunito, Nunito_Sans } from "next/font/google"
 
 
-const font = DotGothic16({weight: "400"})
+const font = Nunito()
 
 export const revalidate=60
 
@@ -27,7 +27,7 @@ export default async function ResourcePost({ params }: { params: Promise<{ slug:
   return <ContentCard>
     <ContentTitle>{post.title}</ContentTitle>
     <ContentTitle as="h2">{post.author} - {new Date(post.createdAt).toLocaleDateString()}</ContentTitle>
-    <ContentTile className={`prose prose-aero prose-lg dark:prose-aero-dark prose-headings:text-center max-w-none ${font.className} `}>
+    <ContentTile className={`prose prose-aero  dark:prose-aero-dark prose-headings:text-center max-w-none ${font.className} prose-img:rounded-xl prose-img:m-auto `}>
       <MDXRemote source={post.content} />
     </ContentTile>
   </ContentCard>
