@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito_Sans, Geist_Mono,  } from "next/font/google";
+import { Nunito_Sans, Geist_Mono, } from "next/font/google";
 import HeaderBar from "./ui/HeaderBar";
 import Banner from "./ui/Banner";
 import FooterBar from "./ui/FooterBar";
@@ -8,13 +8,11 @@ import "./globals.css";
 const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",
   subsets: ["latin"],
-  display: "swap"
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: "swap"
 });
 
 export const metadata: Metadata = {
@@ -29,11 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${nunitoSans.variable}! ${geistMono.variable}!`}>
+    <html lang="en" className={`${nunitoSans.className}`}>
       <body
-        className={` antialiased text-foreground!
-        m-0! min-h-screen `}
-      >
+        className="antialiased text-foreground! m-0! min-h-screen">
         <header>
           <Banner />
           <HeaderBar />

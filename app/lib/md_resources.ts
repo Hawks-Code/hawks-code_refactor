@@ -2,6 +2,7 @@ import { PathLike } from "fs";
 import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
+import slugify from "slugify"
 export const MARKDOWN_RESOURCE_PATH =
   process.env.MARKDOWN_RESOURCE_PATH ?? path.join(process.cwd(), "public", "md")
 
@@ -36,10 +37,12 @@ export async function getMdFile(filePath: PathLike): Promise<fileData> {
     const file = await fs.readFile(filePath, { encoding: "utf8" });
     const mdData = matter(file)
     const stat = await fs.stat(filePath)
+    const title = mdData.data.title ?? path.basename(filePath.toString(), path.extname(filePath.toString()))
     return {
+      slug: slugify(title, { lower: true, strict: true }),
       content: mdData.content,
       metadata: mdData.data,
-      title: mdData.data.title ?? path.basename(filePath.toString(), path.extname(filePath.toString())),
+      title,
       author: mdData.data.author ?? "CS Club",
       technologies: mdData.data.technologies ?? [],
       concepts: mdData.data.concepts ?? [],
@@ -64,7 +67,9 @@ export async function getMdFile(filePath: PathLike): Promise<fileData> {
   }
 }
 
+
 export interface fileData {
+  slug: string;
   content: string;
   metadata: Record<string, any>;
   tags: string[];

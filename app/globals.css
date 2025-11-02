@@ -1,10 +1,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-
 @theme {
-  --color-foreground: #FFFFFF;
-  --color-alt-foreground: #000000;
+  --color-foreground: #000000;
+  --color-alt-foreground: #FFFFFF;
 }
 
 
@@ -240,3 +239,5 @@
     }
   }
 }
+
+@import "./prose.css"

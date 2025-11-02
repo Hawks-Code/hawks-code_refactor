@@ -8,13 +8,10 @@ import { Suspense } from "react";
 import matter from "gray-matter";
 
 
+export const revalidate = 300 // 5mins
+
 export default async function ResourcesIndex(): Promise<React.ReactNode> {
-  let files: fileData[] = []
-  try {
-    files = await listMdFiles()
-  } catch (e) {
-    console.error(e)
-  }
+  const files: fileData[] = await listMdFiles()
   return (
     <ContentCard>
       <ContentTitle>Resources</ContentTitle>
@@ -22,7 +19,9 @@ export default async function ResourcesIndex(): Promise<React.ReactNode> {
         <ol>
           {
             files.map((x) =>
-              <li key={x.path}>{x.title}</li>
+              <li key={x.path} className="text-purple-400 dark:text-purple-500">
+                <a href={`/resources/${x.slug}`}>{x.title}</a>
+                </li>
             )
           }
         </ol>
