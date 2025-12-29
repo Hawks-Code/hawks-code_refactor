@@ -1,14 +1,13 @@
 import InstagramLogo from "@/public/icons/instagram.png"
 import DiscordLogo from "@/public/icons/discord.png"
-import ContentCard from "./ui/ContentCard";
-import ContentTitle from "./ui/ContentTitle";
-import ContentTile from "./ui/ContentTile";
-import Grids from "./style/grid.module.css";
+import ContentCard from "../ui/ContentCard";
+import ContentTitle from "../ui/ContentTitle";
+import ContentTile from "../ui/ContentTile";
+import Grids from "../style/grid.module.css";
 
-function CenteredDiv() {
-
-  return <div className="flex w-full! h-full! justify-center items-center">Div</div>
-}
+// function CenteredDiv() {
+//   return <div className="flex w-full! h-full! justify-center items-center">Div</div>
+// }
 
 
 export default function Home() {

@@ -1,0 +1,44 @@
+import chokidar from "chokidar"
+import path from "path"
+import { resourceTableInstance } from "./db"
+import { getMdFile } from "./md_resources"
+
+console.log("Starting watcher")
+
+export const watcher = chokidar.watch(path.join(process.cwd(), "public/md"), {
+  ignored: (filePath, stats) => (stats?.isFile() ?? true) && path.extname(filePath) !== ".md", // only watch js files
+  persistent: true,
+  atomic: true
+})
+
+// const compareData = (data: Object, data1: Object) => JSON.stringify(data) === JSON.stringify(data1);
+
+watcher.on("add", async (file) => {
+  const fileData = await getMdFile(file)
+  resourceTableInstance.create(fileData, { upsert: true })
+})
+watcher.on("change", async (file) => {
+  const fileData = await getMdFile(file)
+  resourceTableInstance.delete(fileData.slug)
+  resourceTableInstance.update(fileData)
+})
+
+watcher.on("unlink", async (file) => {
+  const fileData = await getMdFile(file)
+  resourceTableInstance.delete(fileData.slug)
+})
+
+watcher.on("ready", () => {
+  console.log("Ready to watch")
+})
+
+const shutdown = () => {
+  console.log("Shutting down watcher")
+  watcher.close()
+  process.exit(0)
+}
+
+process.on("SIGINT", shutdown)
+process.on("SIGTERM", shutdown)
+
+process.stdin.resume()

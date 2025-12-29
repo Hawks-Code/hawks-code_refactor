@@ -1,0 +1,55 @@
+{
+  "0": {
+    "slug": "i-love-markdown",
+    "content": "\n# 関数図形の移動する\n\n> [!info] 翻訳インフォメーション\n> [Asunaro-a](https://asunaro-a.com/tips/how-to-study-jhs/76292/)から読めてここで入力を込めた。\n\n図形を移動したり、近くにある図形との関係を知る為に必要な考え方の一つが「図形の移動」です。毎日は僕は「夢と花桜」\nその移動方法とはです：\n- 平行移動　「Transformation」\n- 回転移動　「Rotation」\n- 対称移動　「Reflection」\n\n> 鏡写しの図形は大丈夫です！\n\n![](</md/I love markdown-1.png>)\n\n## TOC \n\n## 平行移動 「ヘイコウイドウ」\n\n平行移動とは、図形を一定方向に一定の距離だけ動かす移動の事です。\n\n![](</md/I love markdown-2.png>)\n\n移動前と移動後の図形中の同じ位置を線で結ぶと分かりやすいのですが、どの点について見てみても、同じ方向に同じ距離だけ動いている、と言う事が分かります。\nその証明として、これが仮に少しでもの向きが変わっているとすると、このように、それぞれの線の進む方向や進距離が少しずつ違ってしまいます。 \n点の位置によって移動した距離や向きが変わってしまうことが分かると思います。\nということで、向きが変わらず別の場所に移動したとき、その図形は平行移動をしています。\n\n## 回転移動　「カイテンイドウ」\n\n回転移動とは、図形をある点を中心として一定の角度だけ回転させる移動の事です。\n全ての点がある点を中心として、同じ角度だけ変わっていることから、この図形は回転移動をしたと断定できます。\nこのように、向きが違い、回転すれば重ねられるような場合は、どこかに中心があって回転移動することが出来ます。\nさて、回転の際に、角度を取った基準となる点を回転の中心といいます。覚えておいてくださいね。\n\n## 対称移動　「タイショウイドウ」\n\n平行移動で回転移動でも対応できない移動は、対称移動によって出来ます。\n対称移動とは、図形をある直線を折り目として折り返す移動の事をいいます。\n\n![](</md/I love markdown-3.webp>)\n\n移動した図形は、他の移動と変わらず図形の形・大きさは変わっていません。回転移動や平行移動と違う点は、鏡写しとなっている点です。鏡写しの図形は、回転させても元々の図形と重ね合わせることが出来ません。平行移動も同様です。\nちなみに、この折り目の直線のことを対称の軸といいます。回転移動の方は回転の中心なので、間違えないように覚えてください。\n\n",
+    "metadata": {
+      "author": "Troy Dwijanto",
+      "tags": [
+        "index",
+        "math"
+      ],
+      "date": "2023-06-11T00:00:00.000Z",
+      "topic": "geometry"
+    },
+    "title": "I love markdown",
+    "author": "Troy Dwijanto",
+    "technologies": [],
+    "concepts": [],
+    "languages": [],
+    "tags": [
+      "index",
+      "math"
+    ],
+    "lastModified": 1762227294150.4158,
+    "createdAt": 1762227294158.416,
+    "path": "/home/troyd/projects/hawks-code_refactor/public/md/I love markdown.md"
+  },
+  "1": {
+    "slug": "constitution",
+    "content": "",
+    "metadata": {},
+    "title": "constitution",
+    "author": "CS Club",
+    "technologies": [],
+    "concepts": [],
+    "languages": [],
+    "tags": [],
+    "lastModified": 1762383277143.4062,
+    "createdAt": 1762383277159.4067,
+    "path": "/home/troyd/projects/hawks-code_refactor/public/md/constitution.md"
+  },
+  "2": {
+    "slug": "lorem-ipsum-is-da-best",
+    "content": "# Lorem Ipsum\n\nLorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.\n\n## TOC\n\n## 簡体字\n\n天使合同翻译工业完成、漂浮淋浴店铺长崎赏樱、地面亲子丼烟蒂右手野兽翅膀。保护漩涡掉落芥末质量初次地藏。傲慢书签自宅高速冷静、省略挂起非常抵达放松研究生、切腹房间贞操破产乐谱疾驰。缝纫疯狂抵达货币手工制妻子。\n\n## Russian\n\nВыбранный нас процесс и постоянный за количественный, Что создаёт соображения нами равным развития степени. Формированию а предпосылки предпосылки стороны структура постоянное, Инновационный начало рост создаёт способствует понимание обществом, Интересный для ресурсосберегающих национальный нас постоянный управление, Напрямую инновационный роль представляет правительством повышению структуры, Выполнять изменений обеспечивает высшего финансовых проблем. На степени проблем формировании последовательного а.\n\n## Deutsch\n\nSehr jahr, es mich erzählen kommen hier, auch zwei hatte wie sein beide das nicht meiste über. Jetzt hinein, wenige meiste könnte immer, als er, eins nicht über, dein gehen weil nur, als sie mein sagen. Aussehen nicht welche hat könnte mehr gehen, leute, hatte sagen jahr, die, mich sagen. \n\n\n## Spanish\n\nBien como aquí a arriba no tener, uno entre. Por, a, más saber no podría muy fuera bien saber tenía tiene podría. A debajo hacer tenía ahora que mucho, bien su, muy, sobre sobre con para casi a como cada que, nuestro. En, más si son fue, parte tomar casi con cosa qué nuevo. Ser contar por venir tomar, con nosotros de arriba, esto en año el más gente estos mucho de nuevo tu. \n\n\n## CPP\n\n```cpp\n#include <print>\n\nint main() {\n  std::println(\"Hello World!\");\n  return 0;\n}\n\n```\n\n## Math\n\n$$\n\\begin{equation}\nx=\\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}\n\\end{equation}\n$$\n\n",
+    "metadata": {},
+    "title": "lorem ipsum is da best",
+    "author": "CS Club",
+    "technologies": [],
+    "concepts": [],
+    "languages": [],
+    "tags": [],
+    "lastModified": 1762227161191.477,
+    "createdAt": 1762227161198.4773,
+    "path": "/home/troyd/projects/hawks-code_refactor/public/md/lorem ipsum is da best.md"
+  }
+}

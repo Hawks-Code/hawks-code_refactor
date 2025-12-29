@@ -78,7 +78,7 @@ export interface fileData {
   concepts: string[];
   course: string | undefined;
   title: string;
-  author: string;
+  author: string | undefined;
   lastModified: number;
   createdAt: number;
   published: boolean;
