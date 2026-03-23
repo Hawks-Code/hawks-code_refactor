@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Geist_Mono, Nunito, } from "next/font/google";
-import HeaderBar, { HeaderNavLink } from "../ui/HeaderBar";
-import Banner from "../ui/Banner";
-import FooterBar from "../ui/FooterBar";
-import "../globals.css";
+import "@/app/globals.css";
+import Banner from "@/app/ui/Banner";
+import HeaderBar, { HeaderNavLink } from "@/app/ui/HeaderBar";
+import FooterBar from "@/app/ui/FooterBar";
 
 const nunitoSans = Nunito({
   variable: "--font-nunito-sans",

@@ -1,7 +1,7 @@
-import ContentCard from "../../ui/ContentCard";
-import ContentTile from "../../ui/ContentTile";
-import ContentTitle from "../../ui/ContentTitle";
-import Leadership from "../../data/leadership.json"
+import ContentCard from "@/app/ui/ContentCard";
+import ContentTile from "@/app/ui/ContentTile";
+import ContentTitle from "@/app/ui/ContentTitle";
+import Leadership from "@/app/data/leadership.json"
 import DefaultProfile from "@/public/icons/frutiger_aero_avatar.webp"
 import Image from "next/image"
 

@@ -1,11 +1,12 @@
-import ContentCard from "../../ui/ContentCard";
-import ContentTitle from "../../ui/ContentTitle";
-import ContentTile from "../../ui/ContentTile";
-import { Search } from "../../ui/Search";
+import ContentCard from "@/app/ui/ContentCard";
+import ContentTitle from "@/app/ui/ContentTitle";
+import ContentTile from "@/app/ui/ContentTile";
+import { Search } from "@/app/ui/Search";
 import Link from "next/link";
 import { Suspense } from "react";
 import { createClient } from "@/app/utils/supabase/server";
 import NotFound from "@/app/(public)/not-found";
+
 
 
 // export const revalidate = 300 // 5mins

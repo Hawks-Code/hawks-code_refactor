@@ -1,5 +1,6 @@
 "use client"
 import { createClient } from "@/app/utils/supabase/client"
+import { redirect } from "next/navigation"
 import { useState } from "react"
 import z from "zod"
 
@@ -33,7 +34,7 @@ export default function AdminLoginPage(): React.ReactNode {
         <button aria-label="Close" disabled onClick={logOut}></button>
       </div>
     </div>
-    <div className="window-body has-space">
+	   <div className="window-body has-space">
       <p>Please login to your crededentials.</p>
       <p><em>Users must be active contributers to the CS Club, contact a club officer for access.</em></p>
       <form className="grid grid-cols-2 gap-x-[6px] p-3">
@@ -45,7 +46,7 @@ export default function AdminLoginPage(): React.ReactNode {
           <button className="button" formAction={login}>
             Login
           </button>
-          <button className="button" onClick={() => { alert("Nyaaaa :3") }}>
+          <button className="button" onClick={() => { redirect("https://www.youtube.com/watch?v=2yJgwwDcgV8") }}>
             Nyaaaa :3
           </button>
         </section>
